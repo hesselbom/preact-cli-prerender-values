@@ -30,7 +30,7 @@ export default function (config) {
 			excludeAssets: [/(bundle|polyfills)(\..*)?\.js$/],
 			config,
 			ssr(params) {
-				return config.prerender ? prerender({ cwd, dest, src }, { ...params, url }) : '';
+				return config.prerender ? prerender({ cwd, dest, src }, { ...params, url, prerender: values }) : '';
 			}
 		});
 	};
