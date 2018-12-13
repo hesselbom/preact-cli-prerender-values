@@ -36,6 +36,10 @@ export default asyncCommand({
 			description: 'Pre-render static app content on initial build',
 			default: false
 		},
+		prerenderUrls: {
+			description: 'Path to pre-render routes configuration.',
+			default: 'prerender-urls.json'
+		},
 		template: {
 			description: 'HTML template used by webpack'
 		},
