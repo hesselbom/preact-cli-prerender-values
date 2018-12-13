@@ -11,6 +11,7 @@ export default function (config) {
 
 	const htmlWebpackConfig = values => {
 		let { url, title } = values;
+		let prerenderValues = Object.assign({}, values);
 		return Object.assign(values, {
 			filename: resolve(dest, url.substring(1), 'index.html'),
 			template: `!!ejs-loader!${config.template || resolve(__dirname, '../../resources/template.html')}`,
@@ -29,8 +30,9 @@ export default function (config) {
 			title: title || config.title || config.manifest.name || config.manifest.short_name || (config.pkg.name || '').replace(/^@[a-z]\//, '') || 'Preact App',
 			excludeAssets: [/(bundle|polyfills)(\..*)?\.js$/],
 			config,
+			prerenderValues,
 			ssr(params) {
-				return config.prerender ? prerender({ cwd, dest, src }, { ...params, url, prerender: values }) : '';
+				return config.prerender ? prerender({ cwd, dest, src }, { ...params, url, prerender: prerenderValues }) : '';
 			}
 		});
 	};
