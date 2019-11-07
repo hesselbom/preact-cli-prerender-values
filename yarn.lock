@@ -2182,8 +2182,8 @@ diff-dom@^2.1.0:
   resolved "https://registry.yarnpkg.com/diff-dom/-/diff-dom-2.3.0.tgz#6d44558a53790e124fe9a1c2c8c795750bcc1b18"
 
 diff@^3.2.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-3.4.0.tgz#b1d85507daf3964828de54b37d0d73ba67dda56c"
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
 
 diffie-hellman@^5.0.0:
   version "5.0.2"
