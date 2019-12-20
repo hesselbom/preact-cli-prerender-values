@@ -31,6 +31,7 @@ export default function (config) {
 			excludeAssets: [/(bundle|polyfills)(\..*)?\.js$/],
 			config,
 			prerenderValues,
+			branch: process.env.BRANCH,
 			ssr(params) {
 				return config.prerender ? prerender({ cwd, dest, src }, { ...params, url, prerender: prerenderValues }) : '';
 			}
